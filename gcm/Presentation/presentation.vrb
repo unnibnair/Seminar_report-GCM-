@@ -1,0 +1,6 @@
+\frametitle{FCM}
+\begin{itemize}
+\item Firebase Cloud Platform inherits GCM’s core infrastructure but simplifies the client development. Developers no longer needs to write their own registration or subscription retry logic. FCM includes a web console called Firebase Notifications which allows users to send notifications without an App server.
+\item Firebase covers all that mobile developers need to build, maintain and scale a mobile app on all platforms (even on iOS): from Storage and databases to innovative tools like Remote Config and Test Lab.
+\item Firebase also presents some performance improvements, it has an average response latency on 250ms and  95\% delivery rate which is a huge improvement when compared to 10s and 40\% on GCM.
+\end{itemize}

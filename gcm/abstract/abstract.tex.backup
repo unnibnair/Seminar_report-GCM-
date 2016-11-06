@@ -1,0 +1,78 @@
+\documentclass[a4paper,10pt]{article}
+%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{filecontents}
+\begin{filecontents}{abstract.bib}
+@article{1,
+title = {Towards Cloud to Device Push Messaging on Android:
+Technologies, Possibilities and Challenges},
+author = {Jarle Hansen, Tor-Morten Grønli, Gheorghita Ghinea},
+journal = {Int. J. Communications, Network and System Sciences},
+year = {2012},
+month = {May}
+},
+@article{2,
+title = {Google Cloud Messaging (GCM): An Evaluation},
+author = {Yavuz Selim, Yilmaz Bahadir Ismail, Aydin Murat Demirbas},
+journal = {Globecom 2014 - Symposium on Selected Areas in Communications: GC14 SAC Internet of Things},
+},
+@article{3,
+title = {\textit{GCM} Service Driven Communication With An Android Application In Cloud Computing},
+author = {Naresh Kumar N (M.Tech), Prof. Mohan K},
+journal = {International Journal of Engineering Research and Technology},
+year = {2013},
+month = {May}
+},
+@article{4,
+title = {GCM Service Driven Communication With An Android Application In Cloud Computing},
+author = {B.Dhivya, G.Lakshmiprabha, P.Nivethitha},
+journal = {International Journal of Emerging Technology and Innovative Engineering},
+year = {2015},
+month = {March}
+},
+@misc{5,
+title = {Google Cloud Messaging},
+author = {https://developers.google.com/cloud-messaging/}
+}
+
+\end{filecontents}
+
+\title{\Huge {\textbf {Push Notifications using Google Cloud Messaging}}}
+\author{
+  \Large { Kevin Joseph } \\
+  josephkevin1995@gmail.com \\
+  \small Roll No 33, S7 CSE \\
+  \\
+  \Large {Guide : Vipin Vasu A V}\\
+  vipin@cet.ac.in
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+\nocite{*}
+
+\renewcommand{\abstractname}{\Large Abstract}
+\begin{abstract}
+Android traditionally kept data synchronization between android-device and server-side using a method of pullling. Each 
+Android device has to poll the server for updated data, which leads to unneccessary network traffic
+and wastage of device battery. In order to overcome this weakness, a data pushing service, GCM was introduced.
+Push describes a style of communication where the request for a given transaction is initiated by the publisher
+or central server. Push messaging is a multi-channel mobile cloud communication platform that unifies push
+notifications, SMS and instant messaging.\\ GSM service allows sending data from the app engine or 
+any other backend to android powered devices. GSM is a lightweight push notification based service notifying
+android applications about new data to be fetched from the server or sending messages containing 4KB
+of payload data. GCM manages all aspects of message queuing and delivery of message to target android
+application running on a target device. Applications on the target device need not be running to receive
+messages. This service will wake up the application as long as the application is set up with the proper broadcast 
+receiver and permissions. The application might post a
+notification, display a custom user interface,
+or silently sync data
+\end{abstract}
+
+\bibliography{abstract}{}
+\bibliographystyle{plain}
+
+\end{document}

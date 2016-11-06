@@ -1,0 +1,8 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Introduction to Cloud}{3}{0}{1}
+\beamer@sectionintoc {2}{Communication Between Cloud and Device}{6}{0}{2}
+\beamer@sectionintoc {3}{Push Technology}{8}{0}{3}
+\beamer@sectionintoc {4}{Cloud To Device Messaging (C2DM)}{11}{0}{4}
+\beamer@sectionintoc {5}{Google Cloud Messaging}{13}{0}{5}
+\beamer@sectionintoc {6}{Firebase Cloud Messaging(FCM)}{34}{0}{6}
+\beamer@sectionintoc {7}{Conclusion}{37}{0}{7}

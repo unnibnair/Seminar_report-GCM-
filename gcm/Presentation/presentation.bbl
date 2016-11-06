@@ -1,0 +1,42 @@
+\begin{thebibliography}{1}
+
+\bibitem{ccwiki}
+Cloud computing: Wiki.
+\newblock https://en.wikipedia.org/wiki/Cloud\_computing.
+
+\bibitem{Gdocs}
+Google cloud messaging.
+\newblock https://developers.google.com/cloud-messaging/.
+
+\bibitem{4}
+P.~B.Dhivya, G.Lakshmiprabha.
+\newblock Gcm service driven communication with an android application in cloud
+  computing.
+\newblock {\em International Journal of Emerging Technology and Innovative
+  Engineering}, March 2015.
+
+\bibitem{dcc}
+Q.~Hassan.
+\newblock Demystifying cloud computing.
+\newblock {\em The Journal of Defense Software Engineering}, December 2014.
+
+\bibitem{1}
+G.~G. Jarle~Hansen, Tor-Morten~Grønli.
+\newblock Towards cloud to device push messaging on android: Technologies,
+  possibilities and challenges.
+\newblock {\em Int. J. Communications, Network and System Sciences}, May 2012.
+
+\bibitem{3}
+P.~M.~K. Naresh Kumar N~(M.Tech).
+\newblock Gcm service driven communication with an android application in cloud
+  computing.
+\newblock {\em International Journal of Engineering Research and Technology},
+  May 2013.
+
+\bibitem{2}
+A.~M.~D. Yavuz~Selim, Yilmaz Bahadir~Ismail.
+\newblock Google cloud messaging (gcm): An evaluation.
+\newblock {\em Globecom 2014 - Symposium on Selected Areas in Communications:
+  GC14 SAC Internet of Things}.
+
+\end{thebibliography}
