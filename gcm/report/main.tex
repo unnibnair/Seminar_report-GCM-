@@ -31,88 +31,112 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[12pt]{article}
+\documentclass[23pt]{article}
+\usepackage[margin=1in, paperwidth=21cm, paperheight=29.7cm]{geometry}
+\usepackage[pdftex]{color,graphicx}
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
-\usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{cite}
 \usepackage{listings}
+\usepackage[nodayofweek]{datetime}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \begin{document}
 \nocite{*}
 \pagenumbering{roman}
-\begin{titlepage}
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
-
-\center % Center everything on the page
- 
-%----------------------------------------------------------------------------------------
-%	HEADING SECTIONS
-%----------------------------------------------------------------------------------------
-
-\textsc{\LARGE College of Engineering, Trivandrum}\\[1.5cm] % Name of your university/college
-\textsc{\Large Computer Science \& Engineering}\\[0.5cm] % Major heading such as course name
-% \textsc{\large Seminar eport}\\[0.5cm] % Minor heading such as course title
-\includegraphics[width=5cm]{images/logo.jpg}
-%----------------------------------------------------------------------------------------
-%	TITLE SECTION
-%----------------------------------------------------------------------------------------
-
+\title{\begin{center}
+\bf SEMINAR REPORT\\
+\vspace{0.5cm} On\\
 \HRule \\[0.4cm]
 { \huge \bfseries Google Cloud Messaging}\\[0.4cm] % Title of your document
-\HRule \\[1.5cm]
- 
-%----------------------------------------------------------------------------------------
-%	AUTHOR SECTION
-%----------------------------------------------------------------------------------------
+\HRule \\[0.4 cm]
+\vspace{0.5cm} \begin{Large} Submitted by:\\ 
+\vspace{.35cm}Kevin Joseph (13400032)
+\end{Large}
+\end{center}}
+\vspace{.5cm}
+\date{}
 
-\begin{minipage}{0.4\textwidth}
-\begin{flushleft} \large
-\emph{Submitted By:}\\
-Kevin Joseph\\
-josephkevin1995@gmail.com\\
-Roll No. 33 % Your name
-\end{flushleft}
-\end{minipage}
-~
-\begin{minipage}{0.4\textwidth}
-\begin{flushright} \large
-\emph{Supervisor:} \\
-Vipin Vasu\\
-vipin@cet.ac.in\\ % Supervisor's Name
-\end{flushright}
-\end{minipage}\\[2cm]
+\maketitle
+\begin{center}
+ {\it\large for the award of the degree}
+\end{center}
+\begin{center}
+ {\it\large of}
+\end{center}
+\begin{center}
+ {\bf\Large Bachelor of Technology}
+\end{center}
 
-% If you don't want a supervisor, uncomment the two lines below and remove the section above
-%\Large \emph{Author:}\\
-%John \textsc{Smith}\\[3cm] % Your name
+\begin{center}
+\includegraphics[scale=.8]{images/logo.jpg}
+\end{center}
+\vspace{.28cm}
 
-%----------------------------------------------------------------------------------------
-%	DATE SECTION
-%----------------------------------------------------------------------------------------
+\begin{center}
+{\bf\large DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING}
 
-{\large \today}\\[1cm] % Date, change the \today to a set date if you want to be precise
+\vspace{.35cm}
+{\bf\large COLLEGE OF ENGINEERING\ , TRIVANDRUM}
+\begin{center}{\large \formatdate{19}{7}{2016}}\\[1cm]\end{center}
+\end{center}
 
-%----------------------------------------------------------------------------------------
-%	LOGO SECTION
-%----------------------------------------------------------------------------------------
-
- % Include a department/university logo - this will require the graphicx package
- 
-%----------------------------------------------------------------------------------------
-
-\vfill % Fill the rest of the page with whitespace
-
-\end{titlepage}
 \newpage
-\tableofcontents
-\listoffigures
-\newpage
-\renewcommand{\abstractname}{\Large Abstract}
 
-\begin{abstract}
-Android traditionally kept data synchronization between android-device and server-side using a method of pullling. Each 
+\begin{center}
+{\bf{\LARGE CERTIFICATE}}
+\end{center}
+\vspace{.1cm}
+\begin{center}
+\includegraphics[scale=.45]{images/logo.jpg}
+\end{center}
+\begin{center}
+\textbf{\Large College of Engineering,
+Trivandrum}
+\end{center}
+
+\vspace{.6cm}
+\begin{Large}
+\begin{spacing}{1.5}
+\hspace{1.5cm} This  is  to certify that the seminar entitled {\bf Google Cloud Messaging} done by {\bf  Kevin Joseph (13400032)} of the {\bf Department of Computer Science and Engineering, College of Engineering, Trivandrum} in partial fulfillment of the requirements for the award of the degree of Bachelor of Technology in Computer Science and Engineering under Kerala University is a Bonafide record of work carried out by him.
+\vspace{2cm}
+\end{spacing}
+
+\bf\Large \hspace{.3cm}\hspace{1.7cm} \hspace{3cm} \\
+\bf\Large \hspace{1cm}Seminar Co-ordinator    \hspace{4cm} Head of Department
+
+\vspace{2cm}
+\begin{spacing}{1.4}
+\noindent Place : Trivandrum
+
+\noindent Date \ : \formatdate{19}{7}{2016}
+\end{spacing}
+\end{Large}
+
+\newpage
+\pagenumbering{roman}
+\begin{center}
+\bf{{\LARGE ACKNOWLEDGEMENT}}
+\end{center}
+\begin{Large}
+\begin{spacing}{1.1}
+\vspace{1cm}
+\hspace{2cm}
+It is with great enthusiasm and spirit I am bringing out this seminar report. First and foremost I wish to express my wholehearted indebtedness to God Almighty for his gracious  blessings showered upon me.
+
+\hspace{2cm} 
+I am extremely grateful for the constant guidance rendered to me by Dr. Abdul Nizar, Head Of the Department of Computer Science, College of Engineering, Trivandrum , our seminar coordinators Mr. Vipin Vasu A. V. and Mr. Sreelal S. . I would also like to express my sincere gratitude to each member of Dept. of Computer Science, GEC, Palakkad for their kind co-operation and encouragement that helped me in completing the seminar. Last but not the least, I would like to thank my friends and parents who have given constant encouragement throughout the course of this project.
+\end{spacing}
+\end{Large}
+\newpage
+\begin{center}{\bf{\LARGE ABSTRACT}}
+\end{center}
+\begin{Large}
+\begin{spacing}{1.1}
+Android traditionally kept data synchronization between android-device and server-side using a method of pulling. Each 
 		Android device has to poll the server for updated data, which leads to unneccessary network traffic
 		and wastage of device battery. In order to overcome this weakness, a data pushing service, GCM was introduced.
 		Push describes a style of communication where the request for a given transaction is initiated by the publisher
@@ -125,12 +149,20 @@ Android traditionally kept data synchronization between android-device and serve
 		messages. This service will wake up the application as long as the application is set up with the proper broadcast 
 		receiver and permissions. The application might post a
 		notification, display a custom user interface,
-		or silently sync data
-\pagenumbering{arabic}
-\end{abstract}
+		or silently sync data.
+\end{spacing}
+\end{Large}
+
 \newpage
+\tableofcontents
+\listoffigures
+\newpage
+\renewcommand{\abstractname}{\Large Abstract}
+	
+\newpage
+\pagenumbering{arabic}
 \section{Introduction to Cloud}
-Cloud computing is a kind of Internet-based computing that provides shared processing resources and data to computers and other devices on demand. It is a model for enabling ubiquitous, on-demand access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications and services)\cite{dcc}\cite{4} which can be rapidly provisioned and released with minimal management effort. Cloud computing and storage solutions provide users and enterprises with various capabilities to store and process their data in third-party data centers.[3] It relies on sharing of resources to achieve coherence and economy of scale, similar to a utility (like the electricity grid) over a network.\cite{ccwiki}
+Cloud computing is a kind of Internet-based computing that provides shared processing resources and data to computers and other devices on demand. It is a model for enabling ubiquitous, on-demand access to a shared pool of configurable computing resources (e.g. networks, servers, storage, applications and services)\cite{dcc}\cite{4} which can be rapidly provisioned and released with minimal management effort. Cloud computing and storage solutions provide users and enterprises with various capabilities to store and process their data in third-party data centers[3]. It relies on sharing of resources to achieve coherence and economy of scale, similar to a utility (like the electricity grid) over a network\cite{ccwiki}.
 
 The cloud provides an appearance unlimited scalability and storage for less cost than in-house data centers. Since its origins cloud services have been providing greater and greater levels of abstraction, making life easier for users. With the advent of mobile and pervasive computing era,
 smartphones became ubiquitous, and wearable devices are
@@ -142,34 +174,33 @@ the Internet.
 Cloud computing enables companies to consume compute resources as a
 utility – just like electricity – rather than having to build and maintain
 computing infrastructures in-house. Such a system provides features like scalability and elasticity providing new and interesting opportunities for many
-companies.It has proven particularly useful for small and
+companies. It has proven particularly useful for small and
 medium enterprises that have a large variation in their
 computing needs. However, not all businesses will
 benefit from moving their data centres to the cloud, e.g.
-when there are government regulations not allowing sen-
-sitive data to be stored with an external cloud provider.
+when there are government regulations not allowing sensitive data to be stored with an external cloud provider.
 \begin{figure}
 \centering
 \includegraphics[width=10cm]{images/cc.png}
-\caption{\label{fig:cc}Cloud Computing}\cite{ccwiki}
+\caption{\label{fig:cc}Cloud Computing.}
 \end{figure} 
 
 The services provided via the cloud can be classified into 3 types:
 \subsection{Software As A Service(SAAS)}
-Software as a service (SaaS) is a software distribution model in which a third-party provider hosts applications and makes them available to customers over the Internet. SaaS removes the need for organizations to install and run applications on their own computers or in their own data centers. This eliminates the expense of hardware acquisition, provisioning and maintenance, as well as software licensing, installation and support.This kind of service provides the maximum level of abstraction where the user only has to provide an input and recieve output from an application provided by a cloud provider.
+Software as a service (SaaS) is a software distribution model in which a third-party provider hosts applications and makes them available to customers over the Internet. SaaS removes the need for organizations to install and run applications on their own computers or in their own data centers. This eliminates the expense of hardware acquisition, provisioning and maintenance, as well as software licensing, installation and support. This kind of service provides the maximum level of abstraction where the user only has to provide an input and recieve output from an application provided by a cloud provider.
 
 \subsection{Platform As A Service(PAAS)}
 In a PaaS model, a cloud provider delivers hardware and software tools, usually those needed for developing and hosting new applications. This kind of service works at a lower level abstraction than SAAS, here the provider provides the hardware and the software environment required for users to develop and host an application of their own.
 
 \subsection{Infrastructure As A Service(IAAS)}
-In an IaaS model, a third-party provider hosts hardware, software, servers, storage and other infrastructure components on behalf of its users. This works at the lowest level of abstraction where the provider only takes care of the hardware maintainance and the users have to create the required evironment and software as per their requirement.IaaS platforms offer highly scalable resources that can be adjusted on-demand. This makes IaaS well-suited for workloads that are temporary, experimental or change unexpected.
+In an IaaS model, a third-party provider hosts hardware, software, servers, storage and other infrastructure components on behalf of its users. This works at the lowest level of abstraction where the provider only takes care of the hardware maintainance and the users have to create the required evironment and software as per their requirement. IaaS platforms offer highly scalable resources that can be adjusted on-demand. This makes IaaS well-suited for workloads that are temporary, experimental or change unexpected.
 
 \section{Communication Between Cloud And Device}
 Considering the increasing number of mobile devices and their dependence on the cloud it is important to make sure the modes of communication are efficient and ensure on time delivery. The methods of communication can be broadly classified into 2 types:
 \subsection{Pull Technology}
-Pulling is a style of network communication where the initial request for data originates from the client, and then is responded to by the server.Pull requests form the foundation of network computing, where many clients request data from centralised servers. Pull is used extensively on the Internet for HTTP page requests from websites.A push can also be simulated using multiple pulls within a short amount of time. For example, when pulling POP3 email messages from a server, a client can make regular pull requests every few minutes. To the user, the email then appears to be pushed, as emails appear to arrive close to real-time. The tradeoff is this places a heavier load on both the server and network in order to function correctly. 
+Pulling is a style of network communication where the initial request for data originates from the client, and then is responded to by the server. Pull requests form the foundation of network computing, where many clients request data from centralised servers. Pull is used extensively on the Internet for HTTP page requests from websites. A push can also be simulated using multiple pulls within a short amount of time. For example, when pulling POP3 email messages from a server, a client can make regular pull requests every few minutes. To the user, the email then appears to be pushed, as emails appear to arrive close to real-time. The tradeoff is this places a heavier load on both the server and network in order to function correctly. 
 \subsection{Push Technology}
-Push, or server push, describes a style of Internet-based communication where the request for a given transaction is initiated by the publisher or central server.Push services are often based on information preferences expressed in advance. This is called a publish/subscribe model. A client "subscribes" to various information "channels" provided by a server; whenever new content is available on one of those channels, the server pushes that information out to the client.
+Push, or server push, describes a style of Internet-based communication where the request for a given transaction is initiated by the publisher or central server. Push services are often based on information preferences expressed in advance. This is called a publish/subscribe model. A client "subscribes" to various information "channels" provided by a server; whenever new content is available on one of those channels, the server pushes that information out to the client.
 
 A push can also be simulated using multiple pulls within a short amount of time. For example, when pulling POP3 email messages from a server, a client can make regular pull requests every few minutes. To the user, the email then appears to be pushed, as emails appear to arrive close to real-time. The tradeoff is this places a heavier load on both the server and network in order to function correctly.
 
@@ -177,33 +208,30 @@ Another way of simulating push using pull is long pollling. This is used particu
 
 \textbf{General Usage: }Push technology is generally used in synchronous conferencing, instant messaging, email, etc. The SMTP mail protocol is a push protocol, the last step of mail where the client gets the mail from the mail server uses a pull protocol like POP3 or IMAP.
 \subsubsection{Hosted Push Services} 
-Several companies provide push notification handling as a service. Here the application developer dosn't have to deal with details like queing of messages.Few of the major hosted push services are:
+Several companies provide push notification handling as a service. Here the application developer dosn't have to deal with details like queing of messages. Few of the major hosted push services are:
 \begin{itemize}
-    \item Apple Push Notification Service
-    \item Google Cloud Messaging
-    \item Xtremepush
+    \item Apple Push Notification Service.
+    \item Google Cloud Messaging.
+    \item Xtremepush.
   \end{itemize}
 \section{Cloud To Device Messaging(C2DM)}
 C2DM the predecessor of GCM was released in 2010 and was first featured in Android 2.2. Some of the features presented by C2DM were:\\
 \textbf{Features:}
       \begin{itemize}
       		\item When messages are received on the Android client, the
-system will wake up the application via an Intent broad-
-cast, and pass the message data
+system will wake up the application via an Intent broadcast, and pass the message data.
 		\item Developers are encouraged to
 send short messages, essentially notifying the mobile
 application that updated information can be retrieved
-from the server
-		\item Maxi-
-mum number of messages that can be sent is approxi-
-mately 200,000 per day. This limit could be increased if required but was not encouraged.
+from the server.
+		\item Maximum number of messages that can be sent is approximately 200,000 per day. This limit could be increased if required but was not encouraged.
 	\end{itemize}
 \textbf{Disadvantages:} 
       	\begin{itemize}
       		\item Certain features, such as sending messages to
 multiple clients, is not supported. Messages could not be addressed to groups or topics.
 		\item The development environment and API could be better. Seeing the possibility of improvment, another push notification library called Simple-C2DM was developed at the same time. Simple-C2DM had simpler APIs and was implemented with a higher level of abstraction.
-		\item In certain cases
+		\item In certain cases.
 quite a big increase in response times for some requests was seen.
 	\end{itemize}
 \section{Google Cloud Messaging(GCM)}
@@ -214,7 +242,7 @@ messages from client apps to servers. The architecture of GCM includes 3 main co
 \begin{figure}
 \centering
 \includegraphics[width=15cm]{images/arch.png}
-\caption{\label{fig:arch}GCM Architecture}
+\caption{\label{fig:arch}GCM Architecture.}
 \end{figure} 
 \begin{itemize}
 	    \item \textbf{GCM Connection Servers: }These are Google servers that transmit the messages from users' application srver to the client application.
@@ -226,7 +254,7 @@ Another key concept of GCM is credentials, The IDs and tokens that are used in G
 \textbf{Credentials:}
 \begin{itemize}
 	    \item \textbf{Sender ID}: The sender ID is used in the registration process to identify an app server that is permitted to send messages to the client app.
-	    \item \textbf{API Key}: An API key saved on the app server that gives the app server authorized access to Google services. In HTTP, the API key is included in the header of POST requests that send messages. In XMPP, the API key is used in the SASL PLAIN authentication request as a password to authenticate the connection
+	    \item \textbf{API Key}: An API key saved on the app server that gives the app server authorized access to Google services. In HTTP, the API key is included in the header of POST requests that send messages. In XMPP, the API key is used in the SASL PLAIN authentication request as a password to authenticate the connection.
 	    \item \textbf{Application ID}: The client app that is registering to receive messages.
 	    \item \textbf{Registration Token}: An ID issued by the GCM connection servers to the client app that allows it to receive messages.
 	\end{itemize}
@@ -234,7 +262,7 @@ Another key concept of GCM is credentials, The IDs and tokens that are used in G
 \begin{figure}[h]
 \centering
 \includegraphics[width=10cm]{images/Steps.jpg}
-\caption{\label{fig:arch}GCM Lifecycle}
+\caption{\label{fig:arch}GCM Lifecycle.}
 \end{figure} 
 \subsubsection{Lifecycle Steps: }
 \begin{itemize}
@@ -262,12 +290,12 @@ To verify that they can send and receive messages, client apps must register wit
 \end{itemize}
 In case the server is unable to do its part of the handshaking, the application must retry sending the token or delete it.
 \subsubsection{Retry Using Exponential Backoff}
- In case the registration fails, the client app must use exponential backoff to retry \emph{i.e.} the app must wait double the time it waited on the last try every time.  The retries exponentially increase the waiting time up to a certain threshold. The idea is that if the server is down temporarily, it is not overwhelmed with requests hitting at the same time when it comes back up.
+ In case the registration fails, the client app must use exponential backoff to retry i.e. the app must wait double the time it waited on the last try every time.  The retries exponentially increase the waiting time up to a certain threshold. The idea is that if the server is down temporarily, it is not overwhelmed with requests hitting at the same time when it comes back up.
  \newpage
  \begin{figure}[h]
 \centering
 \includegraphics[width=10cm]{images/iid-lifecycle.png}
-\caption{\label{fig:iid}Instance ID lifecycle}
+\caption{\label{fig:iid}Instance ID lifecycle.}
 \end{figure}
  \subsubsection{Instance ID API(Android Impletation)} 
  \textbf{Get Instance ID}
@@ -342,7 +370,7 @@ Before you can write client apps that use GCM, you must have an application serv
 \subsubsection{Connection Servers}
 Google provides two types of connection servers for GCM, for HTTP and XMPP protocols. The major difference between the two is that XMPP allows both downstream and upstream messages while HTTP allows only downstream messages.\\
 \textbf{HTTP Server}\\
-To send a message, the application server issues a POST request.A message request is made of 2 parts: HTTP header and HTTP body. The header must contain authorization and content-type. Example:\\
+To send a message, the application server issues a POST request. A message request is made of 2 parts: HTTP header and HTTP body. The header must contain authorization and content-type. Example:\\
 \begin{lstlisting}
 Content-Type:application/json
 Authorization:key=AIzaSyZ-1u...0GBYzPu7Udno5aA
@@ -434,27 +462,27 @@ The possible types of messages are:
 		\end{lstlisting} 
 \end{itemize}
 \section{Performance Analysis}
-In GCM, push notifications to the same device are throttled using token bucket scheme.From the following graphs we can see that the bucket holds 20 tokens and is replenished at a rate of once every 180 seconds. Furthermore, the bucket appears to be completely replenished (randomly) every 0 to 90 minutes. When the bucket is out of tokens, push notifications are dropped instead of queued.
+In GCM, push notifications to the same device are throttled using token bucket scheme. From the following graphs we can see that the bucket holds 20 tokens and is replenished at a rate of once every 180 seconds. Furthermore, the bucket appears to be completely replenished (randomly) every 0 to 90 minutes. When the bucket is out of tokens, push notifications are dropped instead of queued.
 \begin{figure}[h]
 \centering
 \includegraphics[width=8cm]{images/graph1.png}
-\caption{\label{fig:g1}GCM Performance(10s interval)}
+\caption{\label{fig:g1}GCM Performance(10s interval).}
 \end{figure}
 \begin{figure}[h]
 \centering
 \includegraphics[width=8cm]{images/graph2.png}
-\caption{\label{fig:g2}GCM Performance(15s interval)}
+\caption{\label{fig:g2}GCM Performance(15s interval).}
 \end{figure}
 \begin{figure}[h]
 \centering
 \includegraphics[width=8cm]{images/graph3.png}
-\caption{\label{fig:g3}GCM Performance(20s interval)}
+\caption{\label{fig:g3}GCM Performance(20s interval).}
 \end{figure}
 \section{Firebase Cloud Messaging(FCM)}
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=5cm]{images/fcm.png}
-\caption{\label{fig:fcm}FCM architecture}
+\caption{\label{fig:fcm}FCM architecture.}
 \end{figure}
 Firebase Cloud Platform inherits GCM’s core infrastructure but simplifies the client development. Developers no longer needs to write their own registration or subscription retry logic. FCM includes a web console called Firebase Notifications which allows users to send notifications without an App server.\\
 Firebase covers all that mobile developers need to build, maintain and scale a mobile app on all platforms (even on iOS): from Storage and databases to innovative tools like Remote Config and Test Lab.\\

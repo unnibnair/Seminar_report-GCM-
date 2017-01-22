@@ -1,24 +1,24 @@
 \select@language {english}
-\contentsline {section}{\numberline {1}Introduction to Cloud}{2}
-\contentsline {section}{\numberline {2}Cloud Computing}{2}
-\contentsline {subsection}{\numberline {2.1}Software As A Service(SAAS)}{3}
-\contentsline {subsection}{\numberline {2.2}Platform As A Service(PAAS)}{4}
-\contentsline {subsection}{\numberline {2.3}Infrastructure As A Service(IAAS)}{4}
-\contentsline {section}{\numberline {3}Communication Between Cloud And Device}{4}
-\contentsline {subsection}{\numberline {3.1}Pull Technology}{4}
-\contentsline {subsection}{\numberline {3.2}Push Technology}{5}
-\contentsline {subsubsection}{\numberline {3.2.1}Hosted Push Services}{5}
-\contentsline {section}{\numberline {4}Cloud To Device Messaging(C2DM)}{6}
-\contentsline {section}{\numberline {5}Google Cloud Messaging(GCM)}{6}
-\contentsline {subsection}{\numberline {5.1}GCM Lifecycle}{8}
-\contentsline {subsubsection}{\numberline {5.1.1}Lifecycle Steps: }{8}
-\contentsline {subsection}{\numberline {5.2}Registering Client Aplications}{9}
-\contentsline {subsubsection}{\numberline {5.2.1}Retry Using Exponential Backoff}{9}
-\contentsline {subsubsection}{\numberline {5.2.2}Instance ID API(Android Impletation)}{10}
-\contentsline {subsubsection}{\numberline {5.2.3}Uninstalled Client App Unregistration}{11}
-\contentsline {subsection}{\numberline {5.3}GCM Connection Servers}{12}
-\contentsline {subsubsection}{\numberline {5.3.1}Application Servers}{12}
-\contentsline {subsubsection}{\numberline {5.3.2}Connection Servers}{13}
-\contentsline {section}{\numberline {6}Performance Analysis}{15}
-\contentsline {section}{\numberline {7}Firebase Cloud Messaging(FCM)}{16}
-\contentsline {section}{\numberline {8}Conclusion}{17}
+\contentsline {section}{\numberline {1}Introduction to Cloud}{1}
+\contentsline {section}{\numberline {2}Cloud Computing}{1}
+\contentsline {subsection}{\numberline {2.1}Software As A Service(SAAS)}{2}
+\contentsline {subsection}{\numberline {2.2}Platform As A Service(PAAS)}{2}
+\contentsline {subsection}{\numberline {2.3}Infrastructure As A Service(IAAS)}{2}
+\contentsline {section}{\numberline {3}Communication Between Cloud And Device}{2}
+\contentsline {subsection}{\numberline {3.1}Pull Technology}{2}
+\contentsline {subsection}{\numberline {3.2}Push Technology}{2}
+\contentsline {subsubsection}{\numberline {3.2.1}Hosted Push Services}{3}
+\contentsline {section}{\numberline {4}Cloud To Device Messaging(C2DM)}{3}
+\contentsline {section}{\numberline {5}Google Cloud Messaging(GCM)}{3}
+\contentsline {subsection}{\numberline {5.1}GCM Lifecycle}{4}
+\contentsline {subsubsection}{\numberline {5.1.1}Lifecycle Steps: }{4}
+\contentsline {subsection}{\numberline {5.2}Registering Client Aplications}{5}
+\contentsline {subsubsection}{\numberline {5.2.1}Retry Using Exponential Backoff}{5}
+\contentsline {subsubsection}{\numberline {5.2.2}Instance ID API(Android Impletation)}{6}
+\contentsline {subsubsection}{\numberline {5.2.3}Uninstalled Client App Unregistration}{7}
+\contentsline {subsection}{\numberline {5.3}GCM Connection Servers}{7}
+\contentsline {subsubsection}{\numberline {5.3.1}Application Servers}{7}
+\contentsline {subsubsection}{\numberline {5.3.2}Connection Servers}{8}
+\contentsline {section}{\numberline {6}Performance Analysis}{9}
+\contentsline {section}{\numberline {7}Firebase Cloud Messaging(FCM)}{9}
+\contentsline {section}{\numberline {8}Conclusion}{10}
